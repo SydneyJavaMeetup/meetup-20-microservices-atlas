@@ -84,7 +84,7 @@ db.photo.aggregate(
             "breeds": {
               "type": "string",
               "path": "breeds",
-              "numBuckets": 1000
+              "numBuckets": 10
             },
             "coloursFacet": {
               "type": "string",
@@ -119,3 +119,6 @@ db.photo.aggregate(
   ]
 )
 ```
+
+The differences in text search types are documented here:  
+https://www.mongodb.com/resources/basics/full-text-search
