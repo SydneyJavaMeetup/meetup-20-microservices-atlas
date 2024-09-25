@@ -25,10 +25,22 @@ db.photo.aggregate(
         "index": "default",
         "facet": {
           "operator": {
-            "text": {
-              "query": "frisbee",
-              "path": "summary"
-            },
+            "compound": {
+              "filter": [
+                {
+                  "text": {
+                    "query": "frisbee",
+                    "path": "summary"
+                  }
+                },
+                {
+                  "equals": {
+                    "path": "colours",
+                    "value": "White"
+                  }
+                }
+              ]
+            }
           },
           "facets": {
             "breeds": {
@@ -50,13 +62,19 @@ db.photo.aggregate(
         }
       }
     },
-    {$limit: 10},
+    {
+      $limit: 10
+    },
     {
       "$facet": {
         docs: [],
         meta: [
-          {"$replaceWith": "$$SEARCH_META"},
-          {"$limit": 1}
+          {
+            "$replaceWith": "$$SEARCH_META"
+          },
+          {
+            "$limit": 1
+          }
         ]
       }
     }
