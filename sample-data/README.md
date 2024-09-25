@@ -1,5 +1,41 @@
 The sample data here includes links to images of dogs, their breeds colours and sizes as created by an LLM. 
 
+An example document is:
+```
+{
+  "url": "https://image-search.mycodefu.com/photos/Images/n02091134-whippet/n02091134_12142.jpg",
+  "caption": "The image shows a brown and white dog running on a grassy field with a yellow frisbee in its mouth. The dog appears to be in mid-stride, with its front legs stretched out and its tail wagging. Its ears are perked up and its mouth is open, as if it is about to catch the Frisbee. The background is blurred, but it seems to be a sunny day with trees and a blue sky.",
+  "summary": "A whippet dog is running across a grassy field with a yellow frisbee in its mouth.",
+  "hasPerson": false,
+  "dogs": [
+    {
+      "breed": "Whippet",
+      "size": "Medium",
+      "colour": [
+        "Brown",
+        "White"
+      ]
+    }
+  ],
+  "runData": {
+    "filename": "photos/Images/n02091134-whippet/n02091134_12142.jpg",
+    "captionTimeTakenSeconds": 0.86,
+    "infoTimeTakenSeconds": 5
+  },
+  "breeds": [
+    "Whippet"
+  ],
+  "colours": [
+    "Brown",
+    "White"
+  ],
+  "sizes": [
+    "Medium"
+  ]
+}
+```
+
+
 You can start a docker container for Atlas with:
 ```
 docker run -d -p 27017:27017 mongodb/mongodb-atlas-local
