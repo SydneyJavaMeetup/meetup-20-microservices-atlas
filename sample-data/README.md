@@ -16,4 +16,50 @@ db.photo.remove({colours: {$nin: ['Black', 'Brown', 'Golden', 'Grey', 'White']}}
 db.photo.remove({colours: 'Afghan Hound'});
 ```
 
-
+You can perform searches over the data like this:
+```
+db.photo.aggregate(
+  [
+    {
+      "$search": {
+        "index": "default",
+        "facet": {
+          "operator": {
+            "text": {
+              "query": "frisbee",
+              "path": "summary"
+            },
+          },
+          "facets": {
+            "breeds": {
+              "type": "string",
+              "path": "breeds",
+              "numBuckets": 1000
+            },
+            "coloursFacet": {
+              "type": "string",
+              "path": "colours",
+              "numBuckets": 10
+            },
+            "sizesFacet": {
+              "type": "string",
+              "path": "sizes",
+              "numBuckets": 10
+            }
+          }
+        }
+      }
+    },
+    {$limit: 10},
+    {
+      "$facet": {
+        docs: [],
+        meta: [
+          {"$replaceWith": "$$SEARCH_META"},
+          {"$limit": 1}
+        ]
+      }
+    }
+  ]
+)
+```
