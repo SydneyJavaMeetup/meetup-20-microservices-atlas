@@ -1,6 +1,8 @@
 The sample data here includes links to images of dogs, their breeds colours and sizes as created by an LLM. 
 
 An example document is:
+![image](https://github.com/user-attachments/assets/91ee1c60-0ac4-4b06-903b-6f9d789b858a)
+
 ```
 {
   "url": "https://image-search.mycodefu.com/photos/Images/n02091134-whippet/n02091134_12142.jpg",
