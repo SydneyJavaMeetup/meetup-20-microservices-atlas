@@ -52,4 +52,9 @@ Ethos, vibe
 
 # Links
 
+Slides:  
+[Axe Group - Microservices Transformation - A cautionary tale.pdf](https://github.com/user-attachments/files/17142395/Axe.Group.-.Microservices.Transformation.-.A.cautionary.tale.pdf)
 
+[AtlasPreso.pdf](https://github.com/user-attachments/files/17142409/AtlasPreso.pdf)
+
+Code:  
