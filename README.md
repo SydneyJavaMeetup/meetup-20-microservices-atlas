@@ -53,8 +53,9 @@ Ethos, vibe
 # Links
 
 Slides:  
-[Axe Group - Microservices Transformation - A cautionary tale.pdf](https://github.com/user-attachments/files/17142395/Axe.Group.-.Microservices.Transformation.-.A.cautionary.tale.pdf)
+[Axe Group - Microservices Transformation - A cautionary tale](./AxeGroup-MicroservicesTransformation-ACautionaryTale.pdf)
 
-[AtlasPreso.pdf](https://github.com/user-attachments/files/17142409/AtlasPreso.pdf)
+[MongoDB Atlas Search Slides](./AtlasPreso.pdf)
 
 Code:  
+[MongoDB Atlas Search Demo Code](https://github.com/luketn/java-faceted-atlas-search-demo)
